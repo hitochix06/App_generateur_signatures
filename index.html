@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>générateur signature</title>
+    <!-- importe boostrap 5.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha385-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <!-- importe lien de icon de boostrap 5  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+
+    <!-- importe la police avec lien internet  -->
+    <link href="assets/police/BebasNeue-Regular.ttf">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+
+    <!-- importe le fichier css  -->
+    <link href="assets/styles/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <section id="navigation">
+        <div class="container justify-content-center">
+            <div class="shadow  mb-4 bg-body rounded">
+                <div class="titrepresentation">
+                    <h1>Générateur de signature </h1>
+                </div>
+            </div>
+            <div class="card text-center ">
+                <div class="card-header bg couleur">
+
+                    <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
+                                data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane"
+                                aria-selected="true"><i class="bi bi-border-style"></i></button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
+                                data-bs-target="#profile-tab-pane" type="button" role="tab"
+                                aria-controls="profile-tab-pane" aria-selected="false"><i
+                                    class="bi bi-pencil"></i></button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="container">
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel"
+                            aria-labelledby="home-tab" tabindex="0">
+                            <div class="titre">
+                                <h2>Ajoutez vos informations</h2>
+                            </div>
+                            <form class="row p-4 formulaire ">
+                                <div class="col-md-6 p-1">
+                                    <label for="inputNom" class="form-label">Nom</label>
+                                    <input type="text" class="form-control" id="inputNom" placeholder="Nom">
+                                </div>
+                                <div class="col-md-6 p-1">
+                                    <label for="inputPrenom" class="form-label">Prénom</label>
+                                    <input type="text" class="form-control" id="inputPrenom" placeholder="Prénom">
+                                </div>
+                                <div class="col-md-6 p-1">
+                                    <label for="inputPoste" class="form-label">Poste occupé</label>
+                                    <input type="text" class="form-control" id="inputPoste" placeholder="Poste occupé">
+                                </div>
+                                <div class="col-md-6 p-1">
+                                    <label for="inputTeleFix" class="form-label">Téléphone fixe</label>
+                                    <div class="input-group">
+                                        <div class="input-group-text"><i class="bi bi-telephone"></i></div>
+                                        <input type="tel" class="form-control"
+                                            onkeydown="return checkPhoneKey(event.key)" id="inputTeleFix"
+                                            placeholder="téléphone fixe">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 p-1">
+                                    <label for="inputTelePor" class="form-label">Téléphone portable</label>
+                                    <div class="input-group">
+                                        <div class="input-group-text"><i class="bi bi-phone"></i></div>
+                                        <input type="tel" class="form-control"
+                                            onkeydown="return checkPhoneKey(event.key)" id="inputTelePor"
+                                            placeholder="téléphone portable">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 p-1">
+                                    <label for="inputEmail" class="form-label">Adresse mail</label>
+                                    <div class="input-group">
+                                        <div class="input-group-text">@</div>
+                                        <input type="Email" class="form-control" id="inputEmail"
+                                            placeholder="Adresse mail">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 p-1">
+                                    <label for="inputAdresse" class="form-label">Adresse</label>
+                                    <div class="input-group">
+                                        <div class="input-group-text"><i class="bi bi-geo-alt"></i></i></div>
+                                        <input type="text" class="form-control" id="inputAdresse" placeholder="Adresse">
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- bouton  -->
+                            <div class="d-grid gap-2 col-3 p-3 mx-auto">
+                                <button type="submit" class="btn btn-primary supprimer">Réinitialiser tous les
+                                    champs</button>
+                            </div>
+
+                            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel"
+                                aria-labelledby="profile-tab" tabindex="0">
+                                <div class="titre">
+                                    <h2>Personnaliser le style de la signature</h2>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section id="webPresentation">
+        <div class="container">
+            <div class="row p-4 ">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-header navigation">
+                            <div class="iconrond">
+                                <div class="rond1">
+                                </div>
+                                <div class="rond2">
+                                </div>
+                                <div class="rond3">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="titremail">
+                                <p>
+                                    À : Votre destinataire<br>
+                                    Objet : Découvrez ma nouvelle signature d'e-mail
+                                </p>
+                            </div>
+                            <div class="card-presentationForm text-center">
+                                <div class="container">
+                                    <div class="row p-4">
+                                        <div class="col-md-4">
+                                            <div class="">
+                                                <div class="card-body">
+                                                    <h5 class="image_profil"> <img
+                                                            src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/placeholders/placeholder-image@2x.png"
+                                                            width="150"></h5>
+                                                    <p class="icon_reseau">icon reseau</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 p-4 content">
+                                            <div class="titreFormu">
+                                                <div>
+                                                    <h4 id="Nom">Jean</h4>
+                                                </div>
+                                                <div>
+                                                    <h4 id="Prenom">Dupont</h4>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <span id="Poste">Marketeur</span>
+                                            </div>
+                                            <div class="titreFormu p-2">
+                                                <div>
+                                                    <span id="Telephonfix"><i
+                                                            class="bi bi-telephone-fill"></i>0423456789</span>
+                                                </div>
+                                                <div>
+                                                    <span id="Portable"><i class="bi bi-phone-fill"></i>0623456789
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <span id="Email">
+                                                    <i class="bi bi-envelope-at-fill"></i>jean@dupont
+                                                </span>
+                                            </div>
+                                            <div>
+                                                <span id="Adresse"><i class="bi bi-geo-alt-fill"></i>Ligne
+                                                    d'adresse</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </section>
+
+    <script type="text/javascript" src="assets/scripts/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

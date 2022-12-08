@@ -1,0 +1,80 @@
+//bouton teste de valide
+let boutonSupprim = document.querySelector(".supprimer");
+
+// Récupération des éléments formulaire
+let inputNom = document.querySelector("#inputNom");
+let inputPrenom = document.querySelector("#inputPrenom");
+let inputPoste = document.querySelector("#inputPoste");
+let inputTelePor = document.querySelector("#inputTelePor");
+let inputTeleFix = document.querySelector("#inputTeleFix");
+let inputEmail = document.querySelector("#inputEmail");
+let inputAdresse = document.querySelector("#inputAdresse");
+let formulaire = document.querySelector(".formulaire");
+
+// Récupération des éléments afficher formulaire 
+let afficheNom = document.querySelector("#Nom");
+let affichePrenom = document.querySelector("#Prenom");
+let affichePoste = document.querySelector("#Poste");
+let afficheTeleponFix = document.querySelector("#Telephonfix");
+let affichePortable = document.querySelector("#Portable");
+let afficheEmail = document.querySelector("#Email");
+let afficheAdresse = document.querySelector("#Adresse");
+
+// Fonction qui va afficher mes contacts
+function showFormulaire() {
+  // Pour chaque élément de mon tableau j'ajoute à text.innerHTML le content
+  afficheNom.innerHTML = inputNom.value;
+  affichePrenom.innerHTML = inputPrenom.value;
+  affichePoste.innerHTML = inputPoste.value;
+  affichePortable.innerHTML = inputTelePor.value == "" ? inputTelePor.value : `<i class="bi bi-phone-fill"></i><a href= tel: ${inputTelePor.value}</a>${inputTelePor.value}`;
+  afficheTeleponFix.innerHTML = inputTeleFix.value == "" ? inputTeleFix.value : `<i class="bi bi-telephone-fill"></i> <a href= tel: ${inputTeleFix.value}</a>${inputTeleFix.value}`;
+  afficheEmail.innerHTML = inputEmail.value == "" ? inputEmail.value : '<hr>' + `<i class="bi bi-envelope-at-fill"></i> <a href= mailto: ${inputEmail.value}</a> ${inputEmail.value}`;
+
+  // OPERATEUR TERNAIRE 
+  // CONDITION ? TRUE : FALSE
+  afficheAdresse.innerHTML = inputAdresse.value == "" ? inputAdresse.value : '<i class="bi bi-geo-alt-fill"></i>' + inputAdresse.value;
+
+
+};
+
+
+
+// code pour bloquer fonction caractere juste des numbre
+function checkPhoneKey(key) {
+  return (key >= '0' && key <= '9') ||
+    ['+', '(', ')', '-', 'ArrowLeft', 'ArrowRight', 'Delete', 'Backspace', 'Tab'].includes(key);
+}
+
+function boutonValid() {
+  // Ajouter un contact
+  formulaire.addEventListener("input", function () {
+    // Affichage des contacts dans l'html
+    showFormulaire();
+
+  })
+
+};
+
+function boutonSupprime() {
+  // Supprimer un élément du tableau
+  boutonSupprim.addEventListener("click", function () {
+    alert("Position réinitialisée");
+
+    inputNom.value = "";
+    inputPrenom.value = "";
+    inputPoste.value = "";
+    inputTelePor.value = "";
+    inputTeleFix.value = "";
+    inputEmail.value = "";
+    inputAdresse.value = "";
+
+    showFormulaire();
+
+  });
+};
+
+
+boutonValid();
+boutonSupprime();
+
+

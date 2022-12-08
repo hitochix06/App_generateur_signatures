@@ -1,0 +1,125 @@
+h4 {
+  margin: 5px;
+}
+
+body {
+  background: linear-gradient(
+    to right,
+    rgb(112, 117, 219) 0%,
+    rgba(27, 223, 223, 0.733) 100%
+  );
+}
+
+.couleur {
+  background: linear-gradient(
+    to right,
+    rgb(16, 116, 230) 0%,
+    rgb(59, 118, 148) 100%
+  );
+}
+
+/* code pour personaliser  icon  */
+.bi-pencil,
+.bi-border-style {
+  color: rgb(55, 55, 55);
+  font-size: 25px;
+}
+
+/* personnaliser titre presentation */
+.titrepresentation {
+  font-family: "Bebas Neue", cursive;
+  text-align: center;
+  padding: 10px;
+  margin: 15px;
+}
+
+/* personaliser le titre  */
+.titre {
+  color: rgb(120, 120, 120);
+  font-family: "Bebas Neue", cursive;
+  margin-top: 30px;
+}
+
+/* Code pour personaliser  webpresentation */
+
+.card {
+  box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.219);
+}
+.navigation {
+  background-color: gray;
+}
+
+.iconrond {
+  display: flex;
+}
+
+/* creation de rond  */
+.rond1 {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgb(255, 0, 0);
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.429);
+  margin: 5px;
+}
+.rond2 {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: orange;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.429);
+  margin: 5px;
+}
+.rond3 {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgb(0, 157, 24);
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.429);
+  margin: 5px;
+}
+
+/* code pour personali titre mail */
+
+.titremail {
+  background-color: rgb(164, 164, 164);
+  color: white;
+  padding: 10px;
+  font-weight: 400;
+  border-radius: 5px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.185);
+}
+
+.card-presentationForm {
+  margin: 10px;
+}
+
+/* code pour aligner le texte  */
+.titreFormu {
+  display: flex;
+  justify-content: center;
+}
+
+span {
+  margin: 5px;
+}
+hr {
+  color: red;
+}
+.nav-tabs .nav-link {
+  border: none;
+}
+
+/* code pour donner des margin pour les bouton contat  */
+
+.bi-phone-fill,
+.bi-telephone-fill,
+.bi-envelope-at-fill,
+.bi-geo-alt-fill {
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
