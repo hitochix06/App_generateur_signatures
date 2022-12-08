@@ -125,12 +125,9 @@ a {
 }
 
 .content {
-  color: rgb(92, 87, 87);
+  color: rgb(137, 137, 137);
 }
 /* code pour changer taille icon */
 .icon_reseaux {
   font-size: 20px;
-}
-hr {
-  padding: 0px;
 }
