@@ -111,23 +111,28 @@ hr {
 }
 
 /* code pour donner des margin pour les bouton contat  */
-
 .bi-phone-fill,
 .bi-telephone-fill,
 .bi-envelope-at-fill,
 .bi-geo-alt-fill {
   padding: 10px;
 }
-
+/* code pour enleve ligne  */
 a {
   text-decoration: none;
   color: black;
 }
 
+/* changer couleur sur texte dur  */
 .content {
   color: rgb(137, 137, 137);
 }
+
 /* code pour changer taille icon */
 .icon_reseaux {
   font-size: 20px;
+}
+
+.motifi{
+margin: 50px;
 }
