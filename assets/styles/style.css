@@ -1,7 +1,7 @@
 h4 {
   margin: 5px;
 }
-
+/* code pour  donner fond ecran de couleur  */
 body {
   background: linear-gradient(
     to right,
@@ -133,6 +133,6 @@ a {
   font-size: 20px;
 }
 
-.motifi{
-margin: 50px;
+.motifi {
+  margin: 50px;
 }

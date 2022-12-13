@@ -11,6 +11,12 @@ let inputEmail = document.querySelector("#inputEmail");
 let inputAdresse = document.querySelector("#inputAdresse");
 let formulaire = document.querySelector(".formulaire");
 
+
+// Récupération des éléments formulaireCouleur
+
+
+
+
 // Récupération des éléments afficher formulaire 
 let afficheNom = document.querySelector("#Nom");
 let affichePrenom = document.querySelector("#Prenom");
@@ -19,6 +25,8 @@ let afficheTeleponFix = document.querySelector("#Telephonfix");
 let affichePortable = document.querySelector("#Portable");
 let afficheEmail = document.querySelector("#Email");
 let afficheAdresse = document.querySelector("#Adresse");
+
+
 
 // Fonction qui va afficher mes contacts
 function showFormulaire() {
@@ -62,9 +70,7 @@ function boutonValid() {
     // Affichage des contacts dans l'html
     showFormulaire();
     showCouleur();
-
   })
-
 };
 
 function boutonSupprime() {
