@@ -25,6 +25,9 @@ let afficheTeleponFix = document.querySelector("#Telephonfix");
 let affichePortable = document.querySelector("#Portable");
 let afficheEmail = document.querySelector("#Email");
 let afficheAdresse = document.querySelector("#Adresse");
+
+
+// Récupération des éléments afficher formulaire 
 let afficherTaille = document.querySelector(".content");
 
 /* cree une barre  qui change taille de police */
@@ -33,6 +36,7 @@ function changeFontSize(size) {
   afficheNom.style.fontSize = size + 'px';
   affichePrenom.style.fontSize = size + 'px';
 };
+
 
 // Fonction qui va afficher mes contacts
 function showFormulaire() {
