@@ -25,8 +25,14 @@ let afficheTeleponFix = document.querySelector("#Telephonfix");
 let affichePortable = document.querySelector("#Portable");
 let afficheEmail = document.querySelector("#Email");
 let afficheAdresse = document.querySelector("#Adresse");
+let afficherTaille = document.querySelector(".content");
 
-
+/* cree une barre  qui change taille de police */
+function changeFontSize(size) {
+  afficherTaille.style.fontSize = size + 'px';
+  afficheNom.style.fontSize = size + 'px';
+  affichePrenom.style.fontSize = size + 'px';
+};
 
 // Fonction qui va afficher mes contacts
 function showFormulaire() {
@@ -73,13 +79,7 @@ function boutonValid() {
   })
 };
 
-/* cree une barre  qui change taille de police */
-var barre = document.createElement('div');
-barre.innerHTML = '<input type="range" min="10" max="100" value="50" onchange="changeFontSize(this.value)">';
-document.body.appendChild(barre);
-function changeFontSize(size) {
-  document.body.style.fontSize = size + 'px';
-}
+
 
 function validcouleur() {
   // Ajouter un contact
