@@ -10,10 +10,10 @@ let inputTeleFix = document.querySelector("#inputTeleFix");
 let inputEmail = document.querySelector("#inputEmail");
 let inputAdresse = document.querySelector("#inputAdresse");
 let formulaire = document.querySelector(".formulaire");
-
+let formulaireCouleur = document.querySelector(".motifi");
 
 // Récupération des éléments formulaireCouleur
-
+let inputheme = document.querySelector("#inputTheme");
 
 
 
@@ -73,6 +73,23 @@ function boutonValid() {
   })
 };
 
+/* cree une barre  qui change taille de police */
+var barre = document.createElement('div');
+barre.innerHTML = '<input type="range" min="10" max="100" value="50" onchange="changeFontSize(this.value)">';
+document.body.appendChild(barre);
+function changeFontSize(size) {
+  document.body.style.fontSize = size + 'px';
+}
+
+function validcouleur() {
+  // Ajouter un contact
+  formulaireCouleur.addEventListener("input", function () {
+    // Affichage des contacts dans l'html
+    console.log("tetete");
+  })
+
+}
+
 function boutonSupprime() {
   // Supprimer un élément du tableau
   boutonSupprim.addEventListener("click", function () {
@@ -92,7 +109,7 @@ function boutonSupprime() {
 };
 
 
-
+validcouleur();
 boutonValid();
 boutonSupprime();
 

@@ -117,7 +117,8 @@
                                         <label for="inputTheme" class="form-label">Couleur du thème</label>
                                         <div class="input-group">
                                             <div class="input-group-text">#</div>
-                                            <input type="text" class="form-control" id="inputTheme" placeholder="fffff">
+                                            <input type="text" class="form-control" id="inputTheme"
+                                                placeholder="fff0000">
                                             <input type="color" class="form-control form-control-color"
                                                 id="ColorInputTheme" value="#563d7c" title="Choisissez votre couleur">
                                         </div>
@@ -127,9 +128,9 @@
                                         <div class="input-group">
                                             <div class="input-group-text">#</div>
                                             <input type="text" class="form-control" id="inputcouleurTexte"
-                                                placeholder="fffff">
-                                            <input type="color" class="form-control form-control-color" id="ColorInput"
-                                                value="#563d7c" title="Choisissez votre couleur">
+                                                placeholder="ff0000">
+                                            <input type="color" class="form-control form-control-color"
+                                                id="inputcouleurTexte" value="#563d7c" title="Choisissez votre couleur">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
@@ -138,15 +139,15 @@
                                         <div class="input-group">
                                             <div class="input-group-text">#</div>
                                             <input type="text" class="form-control" id="inputCouleurHyper"
-                                                placeholder="fffff">
+                                                placeholder="ff0000">
                                             <input type="color" class="form-control form-control-color"
-                                                id="exampleColorInput" value="#563d7c" title="Choisissez votre couleur">
+                                                id="inputCouleurHyper" value="#563d7c" title="Choisissez votre couleur">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
-                                        <label for="inputTelePor" class="form-label">Police</label>
+                                        <label for="inputPolice" class="form-label">Police</label>
                                         <div class="input-group">
-                                            <select class="form-select" id="specificSizeSelect">
+                                            <select class="form-select" id="inputPolice">
                                                 <option selected>choix de Police</option>
                                                 <option value="Arial">Arial</option>
                                                 <option value="Courier New">Courier New</option>
@@ -160,7 +161,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-4">
-                                        <label for="inputTelePor" class="form-label">Taille de police</label>
+                                        <label for="inputTaillePolice" class="form-label">Taille de police</label>
                                         <div class="input-group">
                                             <input type="range" class="form-range" min="0" max="5" id="customRange2">
                                         </div>
@@ -267,15 +268,18 @@
         </div>
         </div>
     </section>
-    <div class="container text-center">
 
-        <!-- bouton  -->
-        <div class=" col-0 p-3 mx-auto">
-            <button type="submit" class="btn btn-primary supprimer">Réinitialiser tous les
-                champs</button>
+    <section id="boutonDeRealisation">
+        <div class="container text-center">
+
+            <!-- bouton  -->
+            <div class=" col-0 p-3 mx-auto">
+                <button type="submit" class="btn btn-primary supprimer">Réinitialiser tous les
+                    champs</button>
+            </div>
+
         </div>
-
-    </div>
+    </section>
 
 
     <script type="text/javascript" src="assets/scripts/main.js"></script>
