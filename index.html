@@ -127,10 +127,10 @@
                                         <label for="inputcouleurTexte" class="form-label">Couleur du texte</label>
                                         <div class="input-group">
                                             <div class="input-group-text">#</div>
-                                            <input type="text" class="form-control" id="inputcouleurTexte"
+                                            <input type="text" class="form-control" id="textColors" value="#898989"
                                                 placeholder="ff0000">
-                                            <input type="color" class="form-control form-control-color"
-                                                id="inputcouleurTexte" value="#563d7c" title="Choisissez votre couleur">
+                                            <input type="color" class="form-control form-control-color" id="textColor"
+                                                value="#898989" title="Choisissez votre couleur">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
@@ -278,8 +278,32 @@
                 <button type="submit" class="btn btn-primary supprimer">Réinitialiser tous les
                     champs</button>
             </div>
-
         </div>
+        <!-- 
+        <h2>JavaScript - Change Text and Background Color Manually</h2>
+
+        <label for="bgColor">Background Color:</label>
+        <input type="text" id="bgColor" value="#ffffff">
+        <label for="textColors">Text Color:</label>
+        <input type="text" id="textColors" value="#000000">
+
+        <div id="myDiv">
+            This is some text inside a div element.qsdqsdsqdsqdsq
+        </div>
+
+        <script>
+            const myDiv = document.getElementById("myDiv");
+            const bgColorInput = document.getElementById("bgColor");
+            
+
+            bgColorInput.addEventListener("input", function () {
+                myDiv.style.backgroundColor = bgColorInput.value;
+            });
+
+            textColorInput.addEventListener("input", function () {
+                myDiv.style.color = textColorInput.value;
+            });
+        </script> -->
     </section>
 
 

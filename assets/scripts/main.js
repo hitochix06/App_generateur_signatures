@@ -13,7 +13,8 @@ let formulaire = document.querySelector(".formulaire");
 let formulaireCouleur = document.querySelector(".motifi");
 
 // Récupération des éléments formulaireCouleur
-let inputheme = document.querySelector("#inputTheme");
+let textColorPicker = document.getElementById("textColor");
+let textColorInput = document.getElementById("textColors");
 
 
 
@@ -44,7 +45,7 @@ function showFormulaire() {
   afficheNom.innerHTML = inputNom.value;
   affichePrenom.innerHTML = inputPrenom.value;
   affichePoste.innerHTML = inputPoste.value;
-  affichePortable.innerHTML = inputTelePor.value == "" ? inputTelePor.value : `<i class="bi bi-phone-fill"></i><a href= tel: ${inputTelePor.value}</a>${inputTelePor.value}`;
+  affichePortable.innerHTML = inputTelePor.value == "" ? inputTelePor.value : `<i class="bi bi-phone-fill"></i><a href= tel: ${inputTelePor.value}</a></span>${inputTelePor.value}</span`;
   afficheTeleponFix.innerHTML = inputTeleFix.value == "" ? inputTeleFix.value : `<i class="bi bi-telephone-fill"></i> <a href= tel: ${inputTeleFix.value}</a>${inputTeleFix.value}`;
   afficheEmail.innerHTML = inputEmail.value == "" ? inputEmail.value : '<hr>' + `<i class="bi bi-envelope-at-fill"></i> <a href= mailto: ${inputEmail.value}</a> ${inputEmail.value}`;
 
@@ -56,17 +57,17 @@ function showFormulaire() {
 
 };
 
-function showCouleur() {
+textColorInput.addEventListener("input", function () {
+  afficheNom.style.color = textColorInput.value;
+});
 
-  // coder pour changer la couleur police 
-  afficheNom.style.color = "#000000";
-  affichePrenom.style.color = "#000000";
-  affichePoste.style.color = "#000000";
-  affichePortable.style.color = "#000000";
-  afficheTeleponFix.style.color = "#000000";
-  afficheEmail.style.color = "#000000";
-  afficheAdresse.style.color = "#000000";
-}
+
+// coder pour changer la couleur text 
+setInterval(function () {
+  afficheNom.style.color = textColorPicker.value;
+  affichePrenom.style.color = textColorPicker.value;
+}, 1);
+
 
 // code pour bloquer fonction caractere juste des numbre
 function checkPhoneKey(key) {
@@ -79,7 +80,6 @@ function boutonValid() {
   formulaire.addEventListener("input", function () {
     // Affichage des contacts dans l'html
     showFormulaire();
-    showCouleur();
   })
 };
 
